@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="light">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +54,7 @@
     <header class="w-full max-w-5xl mx-auto p-6 flex justify-between items-center">
         <div>
             <h1 class="font-serif text-2xl font-semibold">Everything You Neglect, You Lose</h1>
-            <p class="text-sm text-gray-500 dark:text-gray-400">Sistema Tú - Diseña tu semana con intención</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Your System - Design your week with intention</p>
         </div>
         <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition">
             <svg id="moon-icon" class="w-6 h-6 hidden dark:block text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -64,13 +64,13 @@
 
     <main class="flex-grow w-full max-w-5xl mx-auto p-6">
         
-        <!-- PANTALLA 1: SETUP -->
+        <!-- SETUP SCREEN -->
         <section id="setup-screen" class="max-w-3xl mx-auto mt-6 opacity-100 transition-opacity duration-500">
             <div class="text-center mb-8">
-                <h2 class="font-serif text-3xl mb-4">Tu Sistema Tú</h2>
+                <h2 class="font-serif text-3xl mb-4">Your System</h2>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                    Define hasta 5 roles. Selecciona cuántas horas necesitan y cuándo prefieres ejecutarlas. 
-                    Calcularemos tu semana base, pero podrás mover o eliminar cualquier bloque después.
+                    Define up to 5 roles. Select how many hours they need and when you prefer to execute them. 
+                    We will calculate your base week, but you can move or delete any block later.
                 </p>
             </div>
 
@@ -79,32 +79,32 @@
                     <div id="roles-container" class="space-y-6"></div>
                     
                     <button type="button" id="add-role-btn" class="mt-6 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline flex items-center">
-                        + Añadir otra órbita (Máximo 5)
+                        + Add another orbit (Max 5)
                     </button>
 
                     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                         <button type="submit" class="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition shadow-lg">
-                            Generar mi semana intencional
+                            Generate my intentional week
                         </button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <!-- PANTALLA 2: CALENDARIO -->
+        <!-- CALENDAR SCREEN -->
         <section id="calendar-screen" class="hidden opacity-0 transition-opacity duration-500">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-4">
                 <div>
-                    <h2 class="font-serif text-2xl mb-2">Tu Semana Sugerida</h2>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Todo es editable. Arrastra para mover, o haz clic en la "X" para eliminar un bloque.</p>
+                    <h2 class="font-serif text-2xl mb-2">Your Suggested Week</h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Everything is editable. Drag to move, or click the "X" to remove a block.</p>
                 </div>
                 <div class="flex flex-wrap gap-3">
                     <button id="back-btn" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition px-4 py-2 rounded border border-gray-200 dark:border-gray-700">
-                        Volver
+                        Back
                     </button>
                     <button id="export-btn" class="text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-700 transition px-4 py-2 rounded shadow flex items-center gap-2">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        Exportar a Google Calendar
+                        Export to Calendar
                     </button>
                 </div>
             </div>
@@ -113,28 +113,28 @@
 
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden relative">
                 <div class="grid grid-cols-8 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 text-center text-sm font-medium text-gray-500 dark:text-gray-400">
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Hora</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Lun</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Mar</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Mié</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Jue</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Vie</div>
-                    <div class="p-3 border-r border-gray-200 dark:border-gray-700 text-indigo-500">Sáb</div>
-                    <div class="p-3 text-indigo-500">Dom</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Hour</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Mon</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Tue</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Wed</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Thu</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700">Fri</div>
+                    <div class="p-3 border-r border-gray-200 dark:border-gray-700 text-indigo-500">Sat</div>
+                    <div class="p-3 text-indigo-500">Sun</div>
                 </div>
                 <div class="h-[600px] overflow-y-auto calendar-grid" id="calendar-body"></div>
             </div>
             
             <p class="text-xs text-center text-gray-400 mt-6 font-serif italic mb-10">
-                "Una semana mediocre que realmente sucedió es infinitamente más valiosa que un sistema perfecto que solo vive en tu mente."
+                "A mediocre week that actually happened is infinitely more valuable than a perfect system that only lives in Notion."
             </p>
         </section>
     </main>
 
-    <!-- Toast Notification (Mensaje Suave) -->
+    <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-5 right-5 transform translate-y-20 opacity-0 transition-all duration-300 bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-50 pointer-events-none">
         <svg class="w-5 h-5 text-yellow-400 dark:text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <span class="text-sm font-medium">Bloque retirado. Recuerda que dejar espacios en blanco también es parte del plan.</span>
+        <span class="text-sm font-medium">Block removed. Remember that leaving white space is also part of the plan.</span>
     </div>
 
     <script>
@@ -157,32 +157,32 @@
             return `
                 <div class="p-4 bg-gray-50 dark:bg-gray-700/30 rounded-lg border border-gray-200 dark:border-gray-700 role-row" id="role-row-${id}">
                     <div class="flex justify-between items-center mb-3">
-                        <label class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Órbita ${id}</label>
-                        ${id > 1 ? `<button type="button" onclick="removeRole(${id})" class="text-xs text-red-500 hover:underline">Eliminar</button>` : ``}
+                        <label class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Orbit ${id}</label>
+                        ${id > 1 ? `<button type="button" onclick="removeRole(${id})" class="text-xs text-red-500 hover:underline">Remove</button>` : ``}
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
                         <div class="md:col-span-1">
-                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Nombre</label>
-                            <input type="text" required class="role-name w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white" placeholder="Ej: Proyecto, Familia">
+                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Name</label>
+                            <input type="text" required class="role-name w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white" placeholder="E.g., Project, Family">
                         </div>
                         <div class="md:col-span-1">
-                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Horas/Semana</label>
-                            <input type="number" required min="1" max="100" class="role-hours w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white" placeholder="Ej: 20">
+                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Hours/Week</label>
+                            <input type="number" required min="1" max="100" class="role-hours w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white" placeholder="E.g., 20">
                         </div>
                         <div class="md:col-span-1">
-                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Días preferidos</label>
+                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Preferred days</label>
                             <select class="role-days w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white">
-                                <option value="any">Cualquier día</option>
-                                <option value="weekdays">Lunes a Viernes</option>
-                                <option value="weekends">Fines de semana</option>
+                                <option value="any">Any day</option>
+                                <option value="weekdays">Weekdays</option>
+                                <option value="weekends">Weekends</option>
                             </select>
                         </div>
                         <div class="md:col-span-1">
-                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Horarios (Puedes marcar varios)</label>
+                            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Preferred times</label>
                             <div class="space-y-1 text-sm text-gray-700 dark:text-gray-300 role-time-group" data-row-id="${id}">
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="morning" checked class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Mañana (8h-13h)</label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="afternoon" class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Tarde (14h-19h)</label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="night" class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Noche (21h-22h)</label>
+                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="morning" checked class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Morning (8h-13h)</label>
+                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="afternoon" class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Afternoon (14h-19h)</label>
+                                <label class="flex items-center cursor-pointer"><input type="checkbox" value="night" class="mr-2 rounded text-indigo-500 border-gray-300 bg-white dark:bg-gray-700"> Night (21h-22h)</label>
                             </div>
                         </div>
                     </div>
@@ -242,7 +242,6 @@
                 });
             }
 
-            // Ya no hay límite estricto de validación, permitiendo sobreescribir bloques
             generateCalendar(userRoles);
             
             setupScreen.classList.add('opacity-0');
@@ -264,11 +263,10 @@
             }, 300);
         });
 
-        // Exportar a ICS (Apple / Google Calendar)
+        // Export to ICS
         document.getElementById('export-btn').addEventListener('click', () => {
-            let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Sistema Tu//ES\nCALSCALE:GREGORIAN\n";
+            let ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Your System//EN\nCALSCALE:GREGORIAN\n";
             
-            // Buscar el próximo lunes para usarlo como fecha base de la "semana de prueba"
             let d = new Date();
             d.setDate(d.getDate() + ((1 + 7 - d.getDay()) % 7 || 7)); 
             d.setHours(0,0,0,0);
@@ -288,7 +286,6 @@
                     let endDate = new Date(eventDate);
                     endDate.setHours(hour + 1, 0, 0, 0);
 
-                    // Formato Local Floating Time para adaptarse al uso horario del usuario
                     const formatDate = (date) => {
                         const pad = (n) => n < 10 ? '0'+n : n;
                         return `${date.getFullYear()}${pad(date.getMonth()+1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}00`;
@@ -298,7 +295,7 @@
                     ics += `SUMMARY:${title}\n`;
                     ics += `DTSTART:${formatDate(eventDate)}\n`;
                     ics += `DTEND:${formatDate(endDate)}\n`;
-                    ics += `DESCRIPTION:Generado por Sistema Tú - Semana de Prueba\n`;
+                    ics += `DESCRIPTION:Generated by Your System - Intentional Week\n`;
                     ics += "END:VEVENT\n";
                 }
             });
@@ -308,21 +305,21 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'sistema_tu_semana_prueba.ics';
+            a.download = 'your_system_week.ics';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
         });
 
-        // Generador de Calendario
+        // Generate Calendar Grid
         function generateCalendar(userRoles) {
             const body = document.getElementById('calendar-body');
             const legend = document.getElementById('legend-container');
             body.innerHTML = '';
             
             let legendHTML = `
-                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-800 dark:bg-slate-300 mr-2 opacity-80"></span>Sueño</div>
-                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-400 mr-2 opacity-80"></span>Comida</div>
+                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-800 dark:bg-slate-300 mr-2 opacity-80"></span>Sleep</div>
+                <div class="flex items-center"><span class="w-3 h-3 rounded-full bg-slate-400 mr-2 opacity-80"></span>Meal</div>
             `;
             userRoles.forEach(r => {
                 legendHTML += `<div class="flex items-center"><span class="w-3 h-3 rounded-full mr-2 opacity-80" style="background-color: ${r.hex}"></span>${r.name}</div>`;
@@ -335,16 +332,16 @@
             const night = [21,22];
             const allWorkingHours = [...morning, ...afternoon, ...night];
 
-            // Inamovibles ahora son simplemente bloques creados automáticamente
+            // Default suggested blocks
             for (let d = 0; d < 7; d++) {
-                grid[23][d] = { roleId: 'sleep', label: 'Sueño', color: 'bg-slate-800 dark:bg-slate-200 text-white dark:text-gray-900 opacity-90' };
-                for (let h = 0; h < 7; h++) grid[h][d] = { roleId: 'sleep', label: 'Sueño', color: 'bg-slate-800 dark:bg-slate-200 text-white dark:text-gray-900 opacity-90' };
-                grid[7][d] = { roleId: 'meal', label: 'Desayuno', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
-                grid[13][d] = { roleId: 'meal', label: 'Comida', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
-                grid[20][d] = { roleId: 'meal', label: 'Cena', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
+                grid[23][d] = { roleId: 'sleep', label: 'Sleep', color: 'bg-slate-800 dark:bg-slate-200 text-white dark:text-gray-900 opacity-90' };
+                for (let h = 0; h < 7; h++) grid[h][d] = { roleId: 'sleep', label: 'Sleep', color: 'bg-slate-800 dark:bg-slate-200 text-white dark:text-gray-900 opacity-90' };
+                grid[7][d] = { roleId: 'meal', label: 'Breakfast', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
+                grid[13][d] = { roleId: 'meal', label: 'Lunch', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
+                grid[20][d] = { roleId: 'meal', label: 'Dinner', color: 'bg-slate-400 dark:bg-slate-600 text-white opacity-80' };
             }
 
-            // Algoritmo de distribución múltiple
+            // Distribute user roles
             userRoles.forEach(role => {
                 let hoursPlaced = 0;
                 let validDays = role.daysPref === 'weekdays' ? [0,1,2,3,4] : (role.daysPref === 'weekends' ? [5,6] : [0,1,2,3,4,5,6]);
@@ -354,7 +351,7 @@
                 if(role.timePref.includes('afternoon')) validHours.push(...afternoon);
                 if(role.timePref.includes('night')) validHours.push(...night);
 
-                // 1. Intentar encajar
+                // 1. Try preferred slots
                 for (let d of validDays) {
                     for (let h of validHours) {
                         if (hoursPlaced < role.hours && grid[h][d] === null) {
@@ -364,7 +361,7 @@
                     }
                 }
 
-                // 2. Fallback
+                // 2. Fallback slots
                 if (hoursPlaced < role.hours) {
                     for (let d = 0; d < 7; d++) {
                         for (let h of allWorkingHours) {
@@ -377,7 +374,7 @@
                 }
             });
 
-            // Renderizado
+            // Render
             for (let h = 0; h < 24; h++) {
                 let hourLabel = document.createElement('div');
                 hourLabel.className = 'time-label flex items-start justify-end pr-2 py-2 text-xs text-gray-400 font-medium bg-gray-50 dark:bg-gray-800 border-r border-b border-gray-200 dark:border-gray-700';
@@ -396,7 +393,7 @@
                         cell.innerHTML = `
                             <div draggable="true" class="group draggable-block w-full h-full flex items-center justify-center rounded-sm text-xs font-semibold text-white shadow-sm ${content.color}" data-role="${content.roleId}">
                                 <span class="block-label truncate px-1 pointer-events-none">${content.label}</span>
-                                <button class="delete-btn opacity-0 group-hover:opacity-100 absolute top-0 right-0 p-1 text-white bg-black bg-opacity-20 hover:bg-opacity-50 rounded-tr-sm rounded-bl-sm transition-opacity" title="Eliminar bloque">
+                                <button class="delete-btn opacity-0 group-hover:opacity-100 absolute top-0 right-0 p-1 text-white bg-black bg-opacity-20 hover:bg-opacity-50 rounded-tr-sm rounded-bl-sm transition-opacity" title="Remove block">
                                     <svg class="w-3 h-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                 </button>
                             </div>
@@ -410,7 +407,7 @@
             initDeleteButtons();
         }
 
-        // Eliminar Bloques
+        // Delete Logic
         function initDeleteButtons() {
             document.querySelectorAll('.delete-btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
@@ -461,7 +458,6 @@
                     
                     if (!draggedItem) return;
 
-                    // Si hay un bloque existente, intercambiarlos
                     if (this.children.length > 0) {
                         const existingBlock = this.children[0];
                         sourceZone.appendChild(existingBlock);
